@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="GLib Reference Manual" link="index.html" author="" name="glib" version="2" language="c">
+  <chapters>
+    <sub name="GLib Overview" link="glib.html">
+      <sub name="Compiling the GLib package" link="glib-building.html"/>
+      <sub name="Cross-compiling the GLib package" link="glib-cross-compiling.html"/>
+      <sub name="Compiling GLib Applications" link="glib-compiling.html"/>
+      <sub name="Running GLib Applications" link="glib-running.html"/>
+      <sub name="Changes to GLib" link="glib-changes.html"/>
+      <sub name="Regular expression syntax" link="glib-regex-syntax.html"/>
+      <sub name="Mailing lists and bug reports" link="glib-resources.html"/>
+    </sub>
+    <sub name="GLib Fundamentals" link="glib-fundamentals.html"/>
+    <sub name="GLib Core Application Support" link="glib-core.html"/>
+    <sub name="GLib Utilities" link="glib-utilities.html">
+      <sub name="URI Functions" link="glib-gurifuncs.html"/>
+      <sub name="Hostname Utilities" link="glib-ghostutils.html"/>
+      <sub name="Perl-compatible regular expressions" link="glib-Perl-compatible-regular-expressions.html"/>
+    </sub>
+    <sub name="GLib Data Types" link="glib-data-types.html">
+      <sub name="GVariantType" link="glib-GVariantType.html"/>
+      <sub name="GVariant" link="glib-GVariant.html"/>
+      <sub name="GVariant Format Strings" link="gvariant-format-strings.html"/>
+      <sub name="GVariant Text Format" link="gvariant-text.html"/>
+    </sub>
+    <sub name="GLib Tools" link="tools.html">
+      <sub name="glib-gettextize" link="glib-gettextize.html"/>
+      <sub name="gtester" link="gtester.html"/>
+      <sub name="gtester-report" link="gtester-report.html"/>
+    </sub>
+    <sub name="Index" link="api-index-full.html"/>
+    <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
+    <sub name="Index of new symbols in 2.2" link="api-index-2-2.html"/>
+    <sub name="Index of new symbols in 2.4" link="api-index-2-4.html"/>
+    <sub name="Index of new symbols in 2.6" link="api-index-2-6.html"/>
+    <sub name="Index of new symbols in 2.8" link="api-index-2-8.html"/>
+    <sub name="Index of new symbols in 2.10" link="api-index-2-10.html"/>
+    <sub name="Index of new symbols in 2.12" link="api-index-2-12.html"/>
+    <sub name="Index of new symbols in 2.14" link="api-index-2-14.html"/>
+    <sub name="Index of new symbols in 2.16" link="api-index-2-16.html"/>
+    <sub name="Index of new symbols in 2.18" link="api-index-2-18.html"/>
+    <sub name="Index of new symbols in 2.20" link="api-index-2-20.html"/>
+    <sub name="Index of new symbols in 2.22" link="api-index-2-22.html"/>
+    <sub name="Index of new symbols in 2.24" link="api-index-2-24.html"/>
+    <sub name="Index of new symbols in 2.26" link="api-index-2-26.html"/>
+    <sub name="Index of new symbols in 2.28" link="api-index-2-28.html"/>
+    <sub name="Index of new symbols in 2.30" link="api-index-2-30.html"/>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <keyword type="" name="Environment variables" link="glib-running.html#id513999"/>
+    <keyword type="" name="Locale" link="glib-running.html#setlocale"/>
+    <keyword type="" name="Traps and traces" link="glib-running.html#id546842"/>
+    <keyword type="" name="Gdb debugging macros" link="glib-running.html#id546931"/>
+    <keyword type="" name="SystemTap" link="glib-running.html#id520497"/>
+    <keyword type="" name="Memory statistics" link="glib-running.html#id520536"/>
+    <keyword type="" name="Non-printing characters" link="glib-regex-syntax.html#id513364"/>
+    <keyword type="" name="Absolute and relative back references" link="glib-regex-syntax.html#id454970"/>
+    <keyword type="" name="Generic character types" link="glib-regex-syntax.html#id454985"/>
+    <keyword type="" name="Newline sequences" link="glib-regex-syntax.html#id506397"/>
+    <keyword type="" name="Unicode character properties" link="glib-regex-syntax.html#id506416"/>
+    <keyword type="" name="Simple assertions" link="glib-regex-syntax.html#id506735"/>
+    <keyword type="" name="Lookahead assertions" link="glib-regex-syntax.html#id562635"/>
+    <keyword type="" name="Lookbehind assertions" link="glib-regex-syntax.html#id562687"/>
+    <keyword type="" name="Using multiple assertions" link="glib-regex-syntax.html#id562810"/>
+    <keyword type="" name="Checking for a used subpattern by number" link="glib-regex-syntax.html#id562908"/>
+    <keyword type="" name="Checking for a used subpattern by name" link="glib-regex-syntax.html#id562950"/>
+    <keyword type="" name="Checking for pattern recursion" link="glib-regex-syntax.html#id562980"/>
+    <keyword type="" name="Defining subpatterns for use by reference only" link="glib-regex-syntax.html#id563010"/>
+    <keyword type="" name="Assertion conditions" link="glib-regex-syntax.html#id563051"/>
+    <keyword type="macro" name="G_URI_RESERVED_CHARS_ALLOWED_IN_PATH" link="glib-gurifuncs.html#G-URI-RESERVED-CHARS-ALLOWED-IN-PATH:CAPS"/>
+    <keyword type="macro" name="G_URI_RESERVED_CHARS_ALLOWED_IN_PATH_ELEMENT" link="glib-gurifuncs.html#G-URI-RESERVED-CHARS-ALLOWED-IN-PATH-ELEMENT:CAPS"/>
+    <keyword type="macro" name="G_URI_RESERVED_CHARS_ALLOWED_IN_USERINFO" link="glib-gurifuncs.html#G-URI-RESERVED-CHARS-ALLOWED-IN-USERINFO:CAPS"/>
+    <keyword type="macro" name="G_URI_RESERVED_CHARS_GENERIC_DELIMITERS" link="glib-gurifuncs.html#G-URI-RESERVED-CHARS-GENERIC-DELIMITERS:CAPS"/>
+    <keyword type="macro" name="G_URI_RESERVED_CHARS_SUBCOMPONENT_DELIMITERS" link="glib-gurifuncs.html#G-URI-RESERVED-CHARS-SUBCOMPONENT-DELIMITERS:CAPS"/>
+    <keyword type="function" name="g_uri_escape_string ()" link="glib-gurifuncs.html#g-uri-escape-string" since="2.16"/>
+    <keyword type="function" name="g_uri_parse_scheme ()" link="glib-gurifuncs.html#g-uri-parse-scheme" since="2.16"/>
+    <keyword type="function" name="g_uri_unescape_segment ()" link="glib-gurifuncs.html#g-uri-unescape-segment" since="2.16"/>
+    <keyword type="function" name="g_uri_unescape_string ()" link="glib-gurifuncs.html#g-uri-unescape-string" since="2.16"/>
+    <keyword type="function" name="g_hostname_is_ascii_encoded ()" link="glib-ghostutils.html#g-hostname-is-ascii-encoded" since="2.22"/>
+    <keyword type="function" name="g_hostname_is_ip_address ()" link="glib-ghostutils.html#g-hostname-is-ip-address" since="2.22"/>
+    <keyword type="function" name="g_hostname_is_non_ascii ()" link="glib-ghostutils.html#g-hostname-is-non-ascii" since="2.22"/>
+    <keyword type="function" name="g_hostname_to_ascii ()" link="glib-ghostutils.html#g-hostname-to-ascii" since="2.22"/>
+    <keyword type="function" name="g_hostname_to_unicode ()" link="glib-ghostutils.html#g-hostname-to-unicode" since="2.22"/>
+    <keyword type="struct" name="GMatchInfo" link="glib-Perl-compatible-regular-expressions.html#GMatchInfo"/>
+    <keyword type="struct" name="GRegex" link="glib-Perl-compatible-regular-expressions.html#GRegex" since="2.14"/>
+    <keyword type="enum" name="enum GRegexCompileFlags" link="glib-Perl-compatible-regular-expressions.html#GRegexCompileFlags" since="2.14"/>
+    <keyword type="enum" name="enum GRegexError" link="glib-Perl-compatible-regular-expressions.html#GRegexError" since="2.14"/>
+    <keyword type="function" name="GRegexEvalCallback ()" link="glib-Perl-compatible-regular-expressions.html#GRegexEvalCallback" since="2.14"/>
+    <keyword type="enum" name="enum GRegexMatchFlags" link="glib-Perl-compatible-regular-expressions.html#GRegexMatchFlags" since="2.14"/>
+    <keyword type="macro" name="G_REGEX_ERROR" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR:CAPS" since="2.14"/>
+    <keyword type="function" name="g_match_info_expand_references ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-expand-references" since="2.14"/>
+    <keyword type="function" name="g_match_info_fetch ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-fetch" since="2.14"/>
+    <keyword type="function" name="g_match_info_fetch_all ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-fetch-all" since="2.14"/>
+    <keyword type="function" name="g_match_info_fetch_named ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-fetch-named" since="2.14"/>
+    <keyword type="function" name="g_match_info_fetch_named_pos ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-fetch-named-pos" since="2.14"/>
+    <keyword type="function" name="g_match_info_fetch_pos ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-fetch-pos" since="2.14"/>
+    <keyword type="function" name="g_match_info_free ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-free" since="2.14"/>
+    <keyword type="function" name="g_match_info_get_match_count ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-get-match-count" since="2.14"/>
+    <keyword type="function" name="g_match_info_get_regex ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-get-regex" since="2.14"/>
+    <keyword type="function" name="g_match_info_get_string ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-get-string" since="2.14"/>
+    <keyword type="function" name="g_match_info_is_partial_match ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-is-partial-match" since="2.14"/>
+    <keyword type="function" name="g_match_info_matches ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-matches" since="2.14"/>
+    <keyword type="function" name="g_match_info_next ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-next" since="2.14"/>
+    <keyword type="function" name="g_match_info_ref ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-ref" since="2.30"/>
+    <keyword type="function" name="g_match_info_unref ()" link="glib-Perl-compatible-regular-expressions.html#g-match-info-unref" since="2.30"/>
+    <keyword type="function" name="g_regex_check_replacement ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-check-replacement" since="2.14"/>
+    <keyword type="function" name="g_regex_error_quark ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-error-quark"/>
+    <keyword type="function" name="g_regex_escape_nul ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-escape-nul" since="2.30"/>
+    <keyword type="function" name="g_regex_escape_string ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-escape-string" since="2.14"/>
+    <keyword type="function" name="g_regex_get_capture_count ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-get-capture-count" since="2.14"/>
+    <keyword type="function" name="g_regex_get_compile_flags ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-get-compile-flags" since="2.26"/>
+    <keyword type="function" name="g_regex_get_match_flags ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-get-match-flags" since="2.26"/>
+    <keyword type="function" name="g_regex_get_max_backref ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-get-max-backref" since="2.14"/>
+    <keyword type="function" name="g_regex_get_pattern ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-get-pattern" since="2.14"/>
+    <keyword type="function" name="g_regex_get_string_number ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-get-string-number" since="2.14"/>
+    <keyword type="function" name="g_regex_match ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-match" since="2.14"/>
+    <keyword type="function" name="g_regex_match_all ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-match-all" since="2.14"/>
+    <keyword type="function" name="g_regex_match_all_full ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-match-all-full" since="2.14"/>
+    <keyword type="function" name="g_regex_match_full ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-match-full" since="2.14"/>
+    <keyword type="function" name="g_regex_match_simple ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-match-simple" since="2.14"/>
+    <keyword type="function" name="g_regex_new ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-new" since="2.14"/>
+    <keyword type="function" name="g_regex_ref ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-ref" since="2.14"/>
+    <keyword type="function" name="g_regex_replace ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-replace" since="2.14"/>
+    <keyword type="function" name="g_regex_replace_eval ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-replace-eval" since="2.14"/>
+    <keyword type="function" name="g_regex_replace_literal ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-replace-literal" since="2.14"/>
+    <keyword type="function" name="g_regex_split ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-split" since="2.14"/>
+    <keyword type="function" name="g_regex_split_full ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-split-full" since="2.14"/>
+    <keyword type="function" name="g_regex_split_simple ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-split-simple" since="2.14"/>
+    <keyword type="function" name="g_regex_unref ()" link="glib-Perl-compatible-regular-expressions.html#g-regex-unref" since="2.14"/>
+    <keyword type="" name="GVariant Type Strings" link="glib-GVariantType.html#gvariant-typestrings"/>
+    <keyword type="struct" name="GVariantType" link="glib-GVariantType.html#GVariantType"/>
+    <keyword type="macro" name="G_VARIANT_TYPE()" link="glib-GVariantType.html#G-VARIANT-TYPE:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_ANY" link="glib-GVariantType.html#G-VARIANT-TYPE-ANY:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_ARRAY" link="glib-GVariantType.html#G-VARIANT-TYPE-ARRAY:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_BASIC" link="glib-GVariantType.html#G-VARIANT-TYPE-BASIC:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_BOOLEAN" link="glib-GVariantType.html#G-VARIANT-TYPE-BOOLEAN:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_BYTE" link="glib-GVariantType.html#G-VARIANT-TYPE-BYTE:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_BYTESTRING" link="glib-GVariantType.html#G-VARIANT-TYPE-BYTESTRING:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_BYTESTRING_ARRAY" link="glib-GVariantType.html#G-VARIANT-TYPE-BYTESTRING-ARRAY:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_DICTIONARY" link="glib-GVariantType.html#G-VARIANT-TYPE-DICTIONARY:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_DICT_ENTRY" link="glib-GVariantType.html#G-VARIANT-TYPE-DICT-ENTRY:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_DOUBLE" link="glib-GVariantType.html#G-VARIANT-TYPE-DOUBLE:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_HANDLE" link="glib-GVariantType.html#G-VARIANT-TYPE-HANDLE:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_INT16" link="glib-GVariantType.html#G-VARIANT-TYPE-INT16:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_INT32" link="glib-GVariantType.html#G-VARIANT-TYPE-INT32:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_INT64" link="glib-GVariantType.html#G-VARIANT-TYPE-INT64:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_MAYBE" link="glib-GVariantType.html#G-VARIANT-TYPE-MAYBE:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_OBJECT_PATH" link="glib-GVariantType.html#G-VARIANT-TYPE-OBJECT-PATH:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_OBJECT_PATH_ARRAY" link="glib-GVariantType.html#G-VARIANT-TYPE-OBJECT-PATH-ARRAY:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_SIGNATURE" link="glib-GVariantType.html#G-VARIANT-TYPE-SIGNATURE:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_STRING" link="glib-GVariantType.html#G-VARIANT-TYPE-STRING:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_STRING_ARRAY" link="glib-GVariantType.html#G-VARIANT-TYPE-STRING-ARRAY:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_TUPLE" link="glib-GVariantType.html#G-VARIANT-TYPE-TUPLE:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_UINT16" link="glib-GVariantType.html#G-VARIANT-TYPE-UINT16:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_UINT32" link="glib-GVariantType.html#G-VARIANT-TYPE-UINT32:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_UINT64" link="glib-GVariantType.html#G-VARIANT-TYPE-UINT64:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_UNIT" link="glib-GVariantType.html#G-VARIANT-TYPE-UNIT:CAPS"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_VARDICT" link="glib-GVariantType.html#G-VARIANT-TYPE-VARDICT:CAPS" since="2.30"/>
+    <keyword type="macro" name="G_VARIANT_TYPE_VARIANT" link="glib-GVariantType.html#G-VARIANT-TYPE-VARIANT:CAPS"/>
+    <keyword type="function" name="g_variant_type_checked_ ()" link="glib-GVariantType.html#g-variant-type-checked-"/>
+    <keyword type="function" name="g_variant_type_copy ()" link="glib-GVariantType.html#g-variant-type-copy"/>
+    <keyword type="function" name="g_variant_type_dup_string ()" link="glib-GVariantType.html#g-variant-type-dup-string"/>
+    <keyword type="function" name="g_variant_type_element ()" link="glib-GVariantType.html#g-variant-type-element"/>
+    <keyword type="function" name="g_variant_type_equal ()" link="glib-GVariantType.html#g-variant-type-equal"/>
+    <keyword type="function" name="g_variant_type_first ()" link="glib-GVariantType.html#g-variant-type-first"/>
+    <keyword type="function" name="g_variant_type_free ()" link="glib-GVariantType.html#g-variant-type-free"/>
+    <keyword type="function" name="g_variant_type_get_string_length ()" link="glib-GVariantType.html#g-variant-type-get-string-length"/>
+    <keyword type="function" name="g_variant_type_hash ()" link="glib-GVariantType.html#g-variant-type-hash"/>
+    <keyword type="function" name="g_variant_type_is_array ()" link="glib-GVariantType.html#g-variant-type-is-array"/>
+    <keyword type="function" name="g_variant_type_is_basic ()" link="glib-GVariantType.html#g-variant-type-is-basic"/>
+    <keyword type="function" name="g_variant_type_is_container ()" link="glib-GVariantType.html#g-variant-type-is-container"/>
+    <keyword type="function" name="g_variant_type_is_definite ()" link="glib-GVariantType.html#g-variant-type-is-definite"/>
+    <keyword type="function" name="g_variant_type_is_dict_entry ()" link="glib-GVariantType.html#g-variant-type-is-dict-entry"/>
+    <keyword type="function" name="g_variant_type_is_maybe ()" link="glib-GVariantType.html#g-variant-type-is-maybe"/>
+    <keyword type="function" name="g_variant_type_is_subtype_of ()" link="glib-GVariantType.html#g-variant-type-is-subtype-of"/>
+    <keyword type="function" name="g_variant_type_is_tuple ()" link="glib-GVariantType.html#g-variant-type-is-tuple"/>
+    <keyword type="function" name="g_variant_type_is_variant ()" link="glib-GVariantType.html#g-variant-type-is-variant"/>
+    <keyword type="function" name="g_variant_type_key ()" link="glib-GVariantType.html#g-variant-type-key"/>
+    <keyword type="function" name="g_variant_type_n_items ()" link="glib-GVariantType.html#g-variant-type-n-items"/>
+    <keyword type="function" name="g_variant_type_new ()" link="glib-GVariantType.html#g-variant-type-new" since="2.24"/>
+    <keyword type="function" name="g_variant_type_new_array ()" link="glib-GVariantType.html#g-variant-type-new-array"/>
+    <keyword type="function" name="g_variant_type_new_dict_entry ()" link="glib-GVariantType.html#g-variant-type-new-dict-entry"/>
+    <keyword type="function" name="g_variant_type_new_maybe ()" link="glib-GVariantType.html#g-variant-type-new-maybe"/>
+    <keyword type="function" name="g_variant_type_new_tuple ()" link="glib-GVariantType.html#g-variant-type-new-tuple"/>
+    <keyword type="function" name="g_variant_type_next ()" link="glib-GVariantType.html#g-variant-type-next"/>
+    <keyword type="function" name="g_variant_type_peek_string ()" link="glib-GVariantType.html#g-variant-type-peek-string"/>
+    <keyword type="function" name="g_variant_type_string_is_valid ()" link="glib-GVariantType.html#g-variant-type-string-is-valid"/>
+    <keyword type="function" name="g_variant_type_string_scan ()" link="glib-GVariantType.html#g-variant-type-string-scan" since="2.24"/>
+    <keyword type="function" name="g_variant_type_value ()" link="glib-GVariantType.html#g-variant-type-value"/>
+    <keyword type="" name="Memory Use" link="glib-GVariant.html#id608827"/>
+    <keyword type="struct" name="GVariant" link="glib-GVariant.html#GVariant" since="2.24"/>
+    <keyword type="struct" name="struct GVariantBuilder" link="glib-GVariant.html#GVariantBuilder"/>
+    <keyword type="enum" name="enum GVariantClass" link="glib-GVariant.html#GVariantClass" since="2.24"/>
+    <keyword type="struct" name="struct GVariantIter" link="glib-GVariant.html#GVariantIter"/>
+    <keyword type="enum" name="enum GVariantParseError" link="glib-GVariant.html#GVariantParseError"/>
+    <keyword type="macro" name="G_VARIANT_PARSE_ERROR" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR:CAPS"/>
+    <keyword type="function" name="g_variant_builder_add ()" link="glib-GVariant.html#g-variant-builder-add" since="2.24"/>
+    <keyword type="function" name="g_variant_builder_add_parsed ()" link="glib-GVariant.html#g-variant-builder-add-parsed" since="2.26"/>
+    <keyword type="function" name="g_variant_builder_add_value ()" link="glib-GVariant.html#g-variant-builder-add-value" since="2.24"/>
+    <keyword type="function" name="g_variant_builder_clear ()" link="glib-GVariant.html#g-variant-builder-clear" since="2.24"/>
+    <keyword type="function" name="g_variant_builder_close ()" link="glib-GVariant.html#g-variant-builder-close" since="2.24"/>
+    <keyword type="function" name="g_variant_builder_end ()" link="glib-GVariant.html#g-variant-builder-end" since="2.24"/>
+    <keyword type="function" name="g_variant_builder_init ()" link="glib-GVariant.html#g-variant-builder-init" since="2.24"/>
+    <keyword type="function" name="g_variant_builder_new ()" link="glib-GVariant.html#g-variant-builder-new" since="2.24"/>
+    <keyword type="function" name="g_variant_builder_open ()" link="glib-GVariant.html#g-variant-builder-open" since="2.24"/>
+    <keyword type="function" name="g_variant_builder_ref ()" link="glib-GVariant.html#g-variant-builder-ref" since="2.24"/>
+    <keyword type="function" name="g_variant_builder_unref ()" link="glib-GVariant.html#g-variant-builder-unref" since="2.24"/>
+    <keyword type="function" name="g_variant_byteswap ()" link="glib-GVariant.html#g-variant-byteswap" since="2.24"/>
+    <keyword type="function" name="g_variant_classify ()" link="glib-GVariant.html#g-variant-classify" since="2.24"/>
+    <keyword type="function" name="g_variant_compare ()" link="glib-GVariant.html#g-variant-compare" since="2.26"/>
+    <keyword type="function" name="g_variant_dup_bytestring ()" link="glib-GVariant.html#g-variant-dup-bytestring" since="2.26"/>
+    <keyword type="function" name="g_variant_dup_bytestring_array ()" link="glib-GVariant.html#g-variant-dup-bytestring-array" since="2.26"/>
+    <keyword type="function" name="g_variant_dup_objv ()" link="glib-GVariant.html#g-variant-dup-objv" since="2.30"/>
+    <keyword type="function" name="g_variant_dup_string ()" link="glib-GVariant.html#g-variant-dup-string" since="2.24"/>
+    <keyword type="function" name="g_variant_dup_strv ()" link="glib-GVariant.html#g-variant-dup-strv" since="2.24"/>
+    <keyword type="function" name="g_variant_equal ()" link="glib-GVariant.html#g-variant-equal" since="2.24"/>
+    <keyword type="function" name="g_variant_get ()" link="glib-GVariant.html#g-variant-get" since="2.24"/>
+    <keyword type="function" name="g_variant_get_boolean ()" link="glib-GVariant.html#g-variant-get-boolean" since="2.24"/>
+    <keyword type="function" name="g_variant_get_byte ()" link="glib-GVariant.html#g-variant-get-byte" since="2.24"/>
+    <keyword type="function" name="g_variant_get_bytestring ()" link="glib-GVariant.html#g-variant-get-bytestring" since="2.26"/>
+    <keyword type="function" name="g_variant_get_bytestring_array ()" link="glib-GVariant.html#g-variant-get-bytestring-array" since="2.26"/>
+    <keyword type="function" name="g_variant_get_child ()" link="glib-GVariant.html#g-variant-get-child" since="2.24"/>
+    <keyword type="function" name="g_variant_get_child_value ()" link="glib-GVariant.html#g-variant-get-child-value" since="2.24"/>
+    <keyword type="function" name="g_variant_get_data ()" link="glib-GVariant.html#g-variant-get-data" since="2.24"/>
+    <keyword type="function" name="g_variant_get_double ()" link="glib-GVariant.html#g-variant-get-double" since="2.24"/>
+    <keyword type="function" name="g_variant_get_fixed_array ()" link="glib-GVariant.html#g-variant-get-fixed-array" since="2.24"/>
+    <keyword type="function" name="g_variant_get_handle ()" link="glib-GVariant.html#g-variant-get-handle" since="2.24"/>
+    <keyword type="function" name="g_variant_get_int16 ()" link="glib-GVariant.html#g-variant-get-int16" since="2.24"/>
+    <keyword type="function" name="g_variant_get_int32 ()" link="glib-GVariant.html#g-variant-get-int32" since="2.24"/>
+    <keyword type="function" name="g_variant_get_int64 ()" link="glib-GVariant.html#g-variant-get-int64" since="2.24"/>
+    <keyword type="function" name="g_variant_get_maybe ()" link="glib-GVariant.html#g-variant-get-maybe" since="2.24"/>
+    <keyword type="function" name="g_variant_get_normal_form ()" link="glib-GVariant.html#g-variant-get-normal-form" since="2.24"/>
+    <keyword type="function" name="g_variant_get_objv ()" link="glib-GVariant.html#g-variant-get-objv" since="2.30"/>
+    <keyword type="function" name="g_variant_get_size ()" link="glib-GVariant.html#g-variant-get-size" since="2.24"/>
+    <keyword type="function" name="g_variant_get_string ()" link="glib-GVariant.html#g-variant-get-string" since="2.24"/>
+    <keyword type="function" name="g_variant_get_strv ()" link="glib-GVariant.html#g-variant-get-strv" since="2.24"/>
+    <keyword type="function" name="g_variant_get_type_string ()" link="glib-GVariant.html#g-variant-get-type-string" since="2.24"/>
+    <keyword type="function" name="g_variant_get_uint16 ()" link="glib-GVariant.html#g-variant-get-uint16" since="2.24"/>
+    <keyword type="function" name="g_variant_get_uint32 ()" link="glib-GVariant.html#g-variant-get-uint32" since="2.24"/>
+    <keyword type="function" name="g_variant_get_uint64 ()" link="glib-GVariant.html#g-variant-get-uint64" since="2.24"/>
+    <keyword type="function" name="g_variant_get_va ()" link="glib-GVariant.html#g-variant-get-va" since="2.24"/>
+    <keyword type="function" name="g_variant_get_variant ()" link="glib-GVariant.html#g-variant-get-variant" since="2.24"/>
+    <keyword type="function" name="g_variant_hash ()" link="glib-GVariant.html#g-variant-hash" since="2.24"/>
+    <keyword type="function" name="g_variant_is_container ()" link="glib-GVariant.html#g-variant-is-container"/>
+    <keyword type="function" name="g_variant_is_floating ()" link="glib-GVariant.html#g-variant-is-floating" since="2.26"/>
+    <keyword type="function" name="g_variant_is_normal_form ()" link="glib-GVariant.html#g-variant-is-normal-form" since="2.24"/>
+    <keyword type="function" name="g_variant_is_object_path ()" link="glib-GVariant.html#g-variant-is-object-path" since="2.24"/>
+    <keyword type="function" name="g_variant_is_of_type ()" link="glib-GVariant.html#g-variant-is-of-type" since="2.24"/>
+    <keyword type="function" name="g_variant_is_signature ()" link="glib-GVariant.html#g-variant-is-signature" since="2.24"/>
+    <keyword type="function" name="g_variant_iter_copy ()" link="glib-GVariant.html#g-variant-iter-copy" since="2.24"/>
+    <keyword type="function" name="g_variant_iter_free ()" link="glib-GVariant.html#g-variant-iter-free" since="2.24"/>
+    <keyword type="function" name="g_variant_iter_init ()" link="glib-GVariant.html#g-variant-iter-init" since="2.24"/>
+    <keyword type="function" name="g_variant_iter_loop ()" link="glib-GVariant.html#g-variant-iter-loop" since="2.24"/>
+    <keyword type="function" name="g_variant_iter_n_children ()" link="glib-GVariant.html#g-variant-iter-n-children" since="2.24"/>
+    <keyword type="function" name="g_variant_iter_new ()" link="glib-GVariant.html#g-variant-iter-new" since="2.24"/>
+    <keyword type="function" name="g_variant_iter_next ()" link="glib-GVariant.html#g-variant-iter-next" since="2.24"/>
+    <keyword type="function" name="g_variant_iter_next_value ()" link="glib-GVariant.html#g-variant-iter-next-value" since="2.24"/>
+    <keyword type="function" name="g_variant_lookup ()" link="glib-GVariant.html#g-variant-lookup" since="2.28"/>
+    <keyword type="function" name="g_variant_lookup_value ()" link="glib-GVariant.html#g-variant-lookup-value" since="2.28"/>
+    <keyword type="function" name="g_variant_n_children ()" link="glib-GVariant.html#g-variant-n-children" since="2.24"/>
+    <keyword type="function" name="g_variant_new ()" link="glib-GVariant.html#g-variant-new" since="2.24"/>
+    <keyword type="function" name="g_variant_new_array ()" link="glib-GVariant.html#g-variant-new-array" since="2.24"/>
+    <keyword type="function" name="g_variant_new_boolean ()" link="glib-GVariant.html#g-variant-new-boolean" since="2.24"/>
+    <keyword type="function" name="g_variant_new_byte ()" link="glib-GVariant.html#g-variant-new-byte" since="2.24"/>
+    <keyword type="function" name="g_variant_new_bytestring ()" link="glib-GVariant.html#g-variant-new-bytestring" since="2.26"/>
+    <keyword type="function" name="g_variant_new_bytestring_array ()" link="glib-GVariant.html#g-variant-new-bytestring-array" since="2.26"/>
+    <keyword type="function" name="g_variant_new_dict_entry ()" link="glib-GVariant.html#g-variant-new-dict-entry" since="2.24"/>
+    <keyword type="function" name="g_variant_new_double ()" link="glib-GVariant.html#g-variant-new-double" since="2.24"/>
+    <keyword type="function" name="g_variant_new_from_data ()" link="glib-GVariant.html#g-variant-new-from-data" since="2.24"/>
+    <keyword type="function" name="g_variant_new_handle ()" link="glib-GVariant.html#g-variant-new-handle" since="2.24"/>
+    <keyword type="function" name="g_variant_new_int16 ()" link="glib-GVariant.html#g-variant-new-int16" since="2.24"/>
+    <keyword type="function" name="g_variant_new_int32 ()" link="glib-GVariant.html#g-variant-new-int32" since="2.24"/>
+    <keyword type="function" name="g_variant_new_int64 ()" link="glib-GVariant.html#g-variant-new-int64" since="2.24"/>
+    <keyword type="function" name="g_variant_new_maybe ()" link="glib-GVariant.html#g-variant-new-maybe" since="2.24"/>
+    <keyword type="function" name="g_variant_new_object_path ()" link="glib-GVariant.html#g-variant-new-object-path" since="2.24"/>
+    <keyword type="function" name="g_variant_new_objv ()" link="glib-GVariant.html#g-variant-new-objv" since="2.30"/>
+    <keyword type="function" name="g_variant_new_parsed ()" link="glib-GVariant.html#g-variant-new-parsed"/>
+    <keyword type="function" name="g_variant_new_parsed_va ()" link="glib-GVariant.html#g-variant-new-parsed-va"/>
+    <keyword type="function" name="g_variant_new_signature ()" link="glib-GVariant.html#g-variant-new-signature" since="2.24"/>
+    <keyword type="function" name="g_variant_new_string ()" link="glib-GVariant.html#g-variant-new-string" since="2.24"/>
+    <keyword type="function" name="g_variant_new_strv ()" link="glib-GVariant.html#g-variant-new-strv" since="2.24"/>
+    <keyword type="function" name="g_variant_new_tuple ()" link="glib-GVariant.html#g-variant-new-tuple" since="2.24"/>
+    <keyword type="function" name="g_variant_new_uint16 ()" link="glib-GVariant.html#g-variant-new-uint16" since="2.24"/>
+    <keyword type="function" name="g_variant_new_uint32 ()" link="glib-GVariant.html#g-variant-new-uint32" since="2.24"/>
+    <keyword type="function" name="g_variant_new_uint64 ()" link="glib-GVariant.html#g-variant-new-uint64" since="2.24"/>
+    <keyword type="function" name="g_variant_new_va ()" link="glib-GVariant.html#g-variant-new-va" since="2.24"/>
+    <keyword type="function" name="g_variant_new_variant ()" link="glib-GVariant.html#g-variant-new-variant" since="2.24"/>
+    <keyword type="function" name="g_variant_parse ()" link="glib-GVariant.html#g-variant-parse"/>
+    <keyword type="function" name="g_variant_parser_get_error_quark ()" link="glib-GVariant.html#g-variant-parser-get-error-quark"/>
+    <keyword type="function" name="g_variant_print ()" link="glib-GVariant.html#g-variant-print"/>
+    <keyword type="function" name="g_variant_print_string ()" link="glib-GVariant.html#g-variant-print-string" since="2.24"/>
+    <keyword type="function" name="g_variant_ref ()" link="glib-GVariant.html#g-variant-ref" since="2.24"/>
+    <keyword type="function" name="g_variant_ref_sink ()" link="glib-GVariant.html#g-variant-ref-sink" since="2.24"/>
+    <keyword type="function" name="g_variant_store ()" link="glib-GVariant.html#g-variant-store" since="2.24"/>
+    <keyword type="function" name="g_variant_take_ref ()" link="glib-GVariant.html#g-variant-take-ref"/>
+    <keyword type="function" name="g_variant_unref ()" link="glib-GVariant.html#g-variant-unref" since="2.24"/>
+    <keyword type="" name="Numeric Types" link="gvariant-format-strings.html#gvariant-format-strings-numeric-types"/>
+    <keyword type="" name="Strings" link="gvariant-format-strings.html#gvariant-format-strings-strings"/>
+    <keyword type="" name="Variants" link="gvariant-format-strings.html#gvariant-format-strings-variants"/>
+    <keyword type="" name="Arrays" link="gvariant-format-strings.html#gvariant-format-strings-arrays"/>
+    <keyword type="" name="Maybe Types" link="gvariant-format-strings.html#gvariant-format-strings-maybe-types"/>
+    <keyword type="" name="Tuples" link="gvariant-format-strings.html#gvariant-format-strings-tuples"/>
+    <keyword type="" name="Dictionaries" link="gvariant-format-strings.html#gvariant-format-strings-dictionaries"/>
+    <keyword type="" name="GVariant *" link="gvariant-format-strings.html#gvariant-format-strings-gvariant"/>
+    <keyword type="" name="Pointers" link="gvariant-format-strings.html#gvariant-format-strings-pointers"/>
+    <keyword type="" name="Convenience Conversions" link="gvariant-format-strings.html#gvariant-format-strings-convenience"/>
+    <keyword type="" name="Booleans" link="gvariant-text.html#gvariant-text-booleans"/>
+    <keyword type="" name="Strings" link="gvariant-text.html#gvariant-text-strings"/>
+    <keyword type="" name="Numbers" link="gvariant-text.html#gvariant-text-numbers"/>
+    <keyword type="" name="Tuples" link="gvariant-text.html#gvariant-text-tuples"/>
+    <keyword type="" name="Arrays" link="gvariant-text.html#gvariant-text-arrays"/>
+    <keyword type="" name="Dictionaries and Dictionary Entries" link="gvariant-text.html#gvariant-text-dictionaries"/>
+    <keyword type="" name="Variants" link="gvariant-text.html#gvariant-text-variants"/>
+    <keyword type="" name="Maybe Types" link="gvariant-text.html#gvariant-text-maybe-types"/>
+    <keyword type="" name="Type Annotations" link="gvariant-text.html#gvariant-text-type-annotations"/>
+    <keyword type="" name="Bytestrings" link="gvariant-text.html#gvariant-text-bytestrings"/>
+    <keyword type="" name="Positional Parameters" link="gvariant-text.html#gvariant-text-positional"/>
+    <keyword type="" name="Options" link="glib-gettextize.html#id547556"/>
+    <keyword type="" name="Options" link="gtester.html#id545769"/>
+    <keyword type="" name="Options" link="gtester-report.html#id531440"/>
+    <keyword type="constant" name="G_REGEX_CASELESS" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-CASELESS:CAPS"/>
+    <keyword type="constant" name="G_REGEX_MULTILINE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-MULTILINE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_DOTALL" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-DOTALL:CAPS"/>
+    <keyword type="constant" name="G_REGEX_EXTENDED" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-EXTENDED:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ANCHORED" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ANCHORED:CAPS"/>
+    <keyword type="constant" name="G_REGEX_DOLLAR_ENDONLY" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-DOLLAR-ENDONLY:CAPS"/>
+    <keyword type="constant" name="G_REGEX_UNGREEDY" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-UNGREEDY:CAPS"/>
+    <keyword type="constant" name="G_REGEX_RAW" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-RAW:CAPS"/>
+    <keyword type="constant" name="G_REGEX_NO_AUTO_CAPTURE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-NO-AUTO-CAPTURE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_OPTIMIZE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-OPTIMIZE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_DUPNAMES" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-DUPNAMES:CAPS"/>
+    <keyword type="constant" name="G_REGEX_NEWLINE_CR" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-NEWLINE-CR:CAPS"/>
+    <keyword type="constant" name="G_REGEX_NEWLINE_LF" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-NEWLINE-LF:CAPS"/>
+    <keyword type="constant" name="G_REGEX_NEWLINE_CRLF" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-NEWLINE-CRLF:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_COMPILE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-COMPILE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_OPTIMIZE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-OPTIMIZE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_REPLACE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-REPLACE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_MATCH" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-MATCH:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_INTERNAL" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-INTERNAL:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_STRAY_BACKSLASH" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-STRAY-BACKSLASH:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_MISSING_CONTROL_CHAR" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-MISSING-CONTROL-CHAR:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_UNRECOGNIZED_ESCAPE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-UNRECOGNIZED-ESCAPE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_QUANTIFIERS_OUT_OF_ORDER" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-QUANTIFIERS-OUT-OF-ORDER:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_QUANTIFIER_TOO_BIG" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-QUANTIFIER-TOO-BIG:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_UNTERMINATED_CHARACTER_CLASS" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-UNTERMINATED-CHARACTER-CLASS:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_INVALID_ESCAPE_IN_CHARACTER_CLASS" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-INVALID-ESCAPE-IN-CHARACTER-CLASS:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_RANGE_OUT_OF_ORDER" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-RANGE-OUT-OF-ORDER:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_NOTHING_TO_REPEAT" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-NOTHING-TO-REPEAT:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_UNRECOGNIZED_CHARACTER" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-UNRECOGNIZED-CHARACTER:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_POSIX_NAMED_CLASS_OUTSIDE_CLASS" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-POSIX-NAMED-CLASS-OUTSIDE-CLASS:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_UNMATCHED_PARENTHESIS" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-UNMATCHED-PARENTHESIS:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_INEXISTENT_SUBPATTERN_REFERENCE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-INEXISTENT-SUBPATTERN-REFERENCE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_UNTERMINATED_COMMENT" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-UNTERMINATED-COMMENT:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_EXPRESSION_TOO_LARGE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-EXPRESSION-TOO-LARGE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_MEMORY_ERROR" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-MEMORY-ERROR:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_VARIABLE_LENGTH_LOOKBEHIND" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-VARIABLE-LENGTH-LOOKBEHIND:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_MALFORMED_CONDITION" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-MALFORMED-CONDITION:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_TOO_MANY_CONDITIONAL_BRANCHES" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-TOO-MANY-CONDITIONAL-BRANCHES:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_ASSERTION_EXPECTED" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-ASSERTION-EXPECTED:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_UNKNOWN_POSIX_CLASS_NAME" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-UNKNOWN-POSIX-CLASS-NAME:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_POSIX_COLLATING_ELEMENTS_NOT_SUPPORTED" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-POSIX-COLLATING-ELEMENTS-NOT-SUPPORTED:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_HEX_CODE_TOO_LARGE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-HEX-CODE-TOO-LARGE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_INVALID_CONDITION" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-INVALID-CONDITION:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_SINGLE_BYTE_MATCH_IN_LOOKBEHIND" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-SINGLE-BYTE-MATCH-IN-LOOKBEHIND:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_INFINITE_LOOP" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-INFINITE-LOOP:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_MISSING_SUBPATTERN_NAME_TERMINATOR" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-MISSING-SUBPATTERN-NAME-TERMINATOR:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_DUPLICATE_SUBPATTERN_NAME" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-DUPLICATE-SUBPATTERN-NAME:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_MALFORMED_PROPERTY" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-MALFORMED-PROPERTY:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_UNKNOWN_PROPERTY" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-UNKNOWN-PROPERTY:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_SUBPATTERN_NAME_TOO_LONG" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-SUBPATTERN-NAME-TOO-LONG:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_TOO_MANY_SUBPATTERNS" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-TOO-MANY-SUBPATTERNS:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_INVALID_OCTAL_VALUE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-INVALID-OCTAL-VALUE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_TOO_MANY_BRANCHES_IN_DEFINE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-TOO-MANY-BRANCHES-IN-DEFINE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_DEFINE_REPETION" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-DEFINE-REPETION:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_INCONSISTENT_NEWLINE_OPTIONS" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-INCONSISTENT-NEWLINE-OPTIONS:CAPS"/>
+    <keyword type="constant" name="G_REGEX_ERROR_MISSING_BACK_REFERENCE" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-ERROR-MISSING-BACK-REFERENCE:CAPS"/>
+    <keyword type="constant" name="G_REGEX_MATCH_ANCHORED" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-MATCH-ANCHORED:CAPS"/>
+    <keyword type="constant" name="G_REGEX_MATCH_NOTBOL" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-MATCH-NOTBOL:CAPS"/>
+    <keyword type="constant" name="G_REGEX_MATCH_NOTEOL" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-MATCH-NOTEOL:CAPS"/>
+    <keyword type="constant" name="G_REGEX_MATCH_NOTEMPTY" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-MATCH-NOTEMPTY:CAPS"/>
+    <keyword type="constant" name="G_REGEX_MATCH_PARTIAL" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-MATCH-PARTIAL:CAPS"/>
+    <keyword type="constant" name="G_REGEX_MATCH_NEWLINE_CR" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-MATCH-NEWLINE-CR:CAPS"/>
+    <keyword type="constant" name="G_REGEX_MATCH_NEWLINE_LF" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-MATCH-NEWLINE-LF:CAPS"/>
+    <keyword type="constant" name="G_REGEX_MATCH_NEWLINE_CRLF" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-MATCH-NEWLINE-CRLF:CAPS"/>
+    <keyword type="constant" name="G_REGEX_MATCH_NEWLINE_ANY" link="glib-Perl-compatible-regular-expressions.html#G-REGEX-MATCH-NEWLINE-ANY:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_BOOLEAN" link="glib-GVariant.html#G-VARIANT-CLASS-BOOLEAN:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_BYTE" link="glib-GVariant.html#G-VARIANT-CLASS-BYTE:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_INT16" link="glib-GVariant.html#G-VARIANT-CLASS-INT16:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_UINT16" link="glib-GVariant.html#G-VARIANT-CLASS-UINT16:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_INT32" link="glib-GVariant.html#G-VARIANT-CLASS-INT32:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_UINT32" link="glib-GVariant.html#G-VARIANT-CLASS-UINT32:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_INT64" link="glib-GVariant.html#G-VARIANT-CLASS-INT64:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_UINT64" link="glib-GVariant.html#G-VARIANT-CLASS-UINT64:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_HANDLE" link="glib-GVariant.html#G-VARIANT-CLASS-HANDLE:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_DOUBLE" link="glib-GVariant.html#G-VARIANT-CLASS-DOUBLE:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_STRING" link="glib-GVariant.html#G-VARIANT-CLASS-STRING:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_OBJECT_PATH" link="glib-GVariant.html#G-VARIANT-CLASS-OBJECT-PATH:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_SIGNATURE" link="glib-GVariant.html#G-VARIANT-CLASS-SIGNATURE:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_VARIANT" link="glib-GVariant.html#G-VARIANT-CLASS-VARIANT:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_MAYBE" link="glib-GVariant.html#G-VARIANT-CLASS-MAYBE:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_ARRAY" link="glib-GVariant.html#G-VARIANT-CLASS-ARRAY:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_TUPLE" link="glib-GVariant.html#G-VARIANT-CLASS-TUPLE:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_CLASS_DICT_ENTRY" link="glib-GVariant.html#G-VARIANT-CLASS-DICT-ENTRY:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_FAILED" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-FAILED:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_BASIC_TYPE_EXPECTED" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-BASIC-TYPE-EXPECTED:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_CANNOT_INFER_TYPE" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-CANNOT-INFER-TYPE:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_DEFINITE_TYPE_EXPECTED" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-DEFINITE-TYPE-EXPECTED:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_INPUT_NOT_AT_END" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-INPUT-NOT-AT-END:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_INVALID_CHARACTER" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-INVALID-CHARACTER:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_INVALID_FORMAT_STRING" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-INVALID-FORMAT-STRING:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_INVALID_OBJECT_PATH" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-INVALID-OBJECT-PATH:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_INVALID_SIGNATURE" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-INVALID-SIGNATURE:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_INVALID_TYPE_STRING" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-INVALID-TYPE-STRING:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_NO_COMMON_TYPE" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-NO-COMMON-TYPE:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_NUMBER_OUT_OF_RANGE" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-NUMBER-OUT-OF-RANGE:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_NUMBER_TOO_BIG" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-NUMBER-TOO-BIG:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_TYPE_ERROR" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-TYPE-ERROR:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_UNEXPECTED_TOKEN" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-UNEXPECTED-TOKEN:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_UNKNOWN_KEYWORD" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-UNKNOWN-KEYWORD:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_UNTERMINATED_STRING_CONSTANT" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-UNTERMINATED-STRING-CONSTANT:CAPS"/>
+    <keyword type="constant" name="G_VARIANT_PARSE_ERROR_VALUE_EXPECTED" link="glib-GVariant.html#G-VARIANT-PARSE-ERROR-VALUE-EXPECTED:CAPS"/>
+  </functions>
+</book>

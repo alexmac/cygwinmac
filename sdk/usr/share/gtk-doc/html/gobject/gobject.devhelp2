@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="GObject Reference Manual" link="index.html" author="" name="gobject" version="2" language="c">
+  <chapters>
+    <sub name="Introduction" link="pr01.html"/>
+    <sub name="Concepts" link="pt01.html">
+      <sub name="Background" link="chapter-intro.html">
+        <sub name="Data types and programming" link="chapter-intro.html#id477766"/>
+        <sub name="Exporting a C API" link="ch01s02.html"/>
+      </sub>
+      <sub name="The GLib Dynamic Type System" link="chapter-gtype.html">
+        <sub name="Copy functions" link="chapter-gtype.html#gtype-copy"/>
+        <sub name="Conventions" link="gtype-conventions.html"/>
+        <sub name="Non-instantiable non-classed fundamental types" link="gtype-non-instantiable.html"/>
+        <sub name="Instantiable classed types: objects" link="gtype-instantiable-classed.html"/>
+        <sub name="Non-instantiable classed types: interfaces" link="gtype-non-instantiable-classed.html"/>
+      </sub>
+      <sub name="The GObject base class" link="chapter-gobject.html">
+        <sub name="Object instantiation" link="chapter-gobject.html#gobject-instantiation"/>
+        <sub name="Object memory management" link="gobject-memory.html"/>
+        <sub name="Object properties" link="gobject-properties.html"/>
+      </sub>
+      <sub name="The GObject messaging system" link="chapter-signal.html">
+        <sub name="Closures" link="chapter-signal.html#closure"/>
+        <sub name="Signals" link="signal.html"/>
+      </sub>
+    </sub>
+    <sub name="API Reference" link="rn01.html">
+      <sub name="Type Information" link="GType.html"/>
+      <sub name="GTypePlugin" link="GTypePlugin.html"/>
+      <sub name="GTypeModule" link="GTypeModule.html"/>
+      <sub name="Boxed Types" link="gobject-Boxed-Types.html"/>
+      <sub name="Closures" link="gobject-Closures.html"/>
+      <sub name="GBinding" link="GBinding.html"/>
+    </sub>
+    <sub name="Tools Reference" link="rn02.html">
+      <sub name="glib-mkenums" link="glib-mkenums.html"/>
+      <sub name="glib-genmarshal" link="glib-genmarshal.html"/>
+      <sub name="gobject-query" link="gobject-query.html"/>
+    </sub>
+    <sub name="Tutorial" link="pt02.html">
+      <sub name="How to define and implement a new GObject" link="howto-gobject.html">
+        <sub name="Boilerplate header code" link="howto-gobject.html#howto-gobject-header"/>
+        <sub name="Boilerplate code" link="howto-gobject-code.html"/>
+        <sub name="Object Construction" link="howto-gobject-construction.html"/>
+        <sub name="Object Destruction" link="howto-gobject-destruction.html"/>
+        <sub name="Object methods" link="howto-gobject-methods.html"/>
+        <sub name="Chaining up" link="howto-gobject-chainup.html"/>
+      </sub>
+      <sub name="How to define and implement interfaces" link="howto-interface.html">
+        <sub name="How to define interfaces" link="howto-interface.html#howto-interface-define"/>
+        <sub name="How To define implement an Interface?" link="howto-interface-implement.html"/>
+        <sub name="Interface definition prerequisites" link="ch06s03.html"/>
+        <sub name="Interface Properties" link="howto-interface-properties.html"/>
+      </sub>
+      <sub name="How to create and use signals" link="howto-signals.html">
+        <sub name="Simple use of signals" link="howto-signals.html#howto-simple-signals"/>
+      </sub>
+    </sub>
+    <sub name="Related Tools" link="pt03.html">
+      <sub name="Vala" link="tools-vala.html"/>
+      <sub name="GObject builder" link="tools-gob.html"/>
+      <sub name="Graphical inspection of GObjects" link="tools-ginspector.html"/>
+      <sub name="Debugging reference count problems" link="tools-refdb.html"/>
+      <sub name="Writing API docs" link="tools-gtkdoc.html"/>
+    </sub>
+    <sub name="Index" link="api-index-full.html"/>
+    <sub name="Index of deprecated symbols" link="api-index-deprecated.html"/>
+    <sub name="Index of new symbols in 2.2" link="api-index-2-2.html"/>
+    <sub name="Index of new symbols in 2.4" link="api-index-2-4.html"/>
+    <sub name="Index of new symbols in 2.6" link="api-index-2-6.html"/>
+    <sub name="Index of new symbols in 2.8" link="api-index-2-8.html"/>
+    <sub name="Index of new symbols in 2.10" link="api-index-2-10.html"/>
+    <sub name="Index of new symbols in 2.12" link="api-index-2-12.html"/>
+    <sub name="Index of new symbols in 2.14" link="api-index-2-14.html"/>
+    <sub name="Index of new symbols in 2.18" link="api-index-2-18.html"/>
+    <sub name="Index of new symbols in 2.22" link="api-index-2-22.html"/>
+    <sub name="Index of new symbols in 2.24" link="api-index-2-24.html"/>
+    <sub name="Index of new symbols in 2.26" link="api-index-2-26.html"/>
+    <sub name="Index of new symbols in 2.28" link="api-index-2-28.html"/>
+    <sub name="Index of new symbols in 2.30" link="api-index-2-30.html"/>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <keyword type="function" name="GBaseFinalizeFunc ()" link="GType.html#GBaseFinalizeFunc"/>
+    <keyword type="function" name="GBaseInitFunc ()" link="GType.html#GBaseInitFunc"/>
+    <keyword type="function" name="GClassFinalizeFunc ()" link="GType.html#GClassFinalizeFunc"/>
+    <keyword type="function" name="GClassInitFunc ()" link="GType.html#GClassInitFunc"/>
+    <keyword type="function" name="GInstanceInitFunc ()" link="GType.html#GInstanceInitFunc"/>
+    <keyword type="function" name="GInterfaceFinalizeFunc ()" link="GType.html#GInterfaceFinalizeFunc"/>
+    <keyword type="struct" name="struct GInterfaceInfo" link="GType.html#GInterfaceInfo"/>
+    <keyword type="function" name="GInterfaceInitFunc ()" link="GType.html#GInterfaceInitFunc"/>
+    <keyword type="typedef" name="GType" link="GType.html#GType"/>
+    <keyword type="union" name="union GTypeCValue" link="GType.html#GTypeCValue"/>
+    <keyword type="struct" name="struct GTypeClass" link="GType.html#GTypeClass"/>
+    <keyword type="function" name="GTypeClassCacheFunc ()" link="GType.html#GTypeClassCacheFunc"/>
+    <keyword type="enum" name="enum GTypeDebugFlags" link="GType.html#GTypeDebugFlags"/>
+    <keyword type="enum" name="enum GTypeFlags" link="GType.html#GTypeFlags"/>
+    <keyword type="enum" name="enum GTypeFundamentalFlags" link="GType.html#GTypeFundamentalFlags"/>
+    <keyword type="struct" name="struct GTypeFundamentalInfo" link="GType.html#GTypeFundamentalInfo"/>
+    <keyword type="struct" name="struct GTypeInfo" link="GType.html#GTypeInfo"/>
+    <keyword type="struct" name="struct GTypeInstance" link="GType.html#GTypeInstance"/>
+    <keyword type="struct" name="struct GTypeInterface" link="GType.html#GTypeInterface"/>
+    <keyword type="function" name="GTypeInterfaceCheckFunc ()" link="GType.html#GTypeInterfaceCheckFunc" since="2.4"/>
+    <keyword type="struct" name="GTypePlugin" link="GType.html#GTypePlugin-struct"/>
+    <keyword type="struct" name="struct GTypeQuery" link="GType.html#GTypeQuery"/>
+    <keyword type="struct" name="struct GTypeValueTable" link="GType.html#GTypeValueTable"/>
+    <keyword type="struct" name="GValue" link="GType.html#GValue-struct"/>
+    <keyword type="macro" name="G_DEFINE_ABSTRACT_TYPE()" link="GType.html#G-DEFINE-ABSTRACT-TYPE:CAPS" since="2.4"/>
+    <keyword type="macro" name="G_DEFINE_ABSTRACT_TYPE_WITH_CODE()" link="GType.html#G-DEFINE-ABSTRACT-TYPE-WITH-CODE:CAPS" since="2.4"/>
+    <keyword type="macro" name="G_DEFINE_BOXED_TYPE()" link="GType.html#G-DEFINE-BOXED-TYPE:CAPS" since="2.26"/>
+    <keyword type="macro" name="G_DEFINE_BOXED_TYPE_WITH_CODE()" link="GType.html#G-DEFINE-BOXED-TYPE-WITH-CODE:CAPS" since="2.26"/>
+    <keyword type="macro" name="G_DEFINE_INTERFACE_WITH_CODE()" link="GType.html#G-DEFINE-INTERFACE-WITH-CODE:CAPS" since="2.24"/>
+    <keyword type="macro" name="G_DEFINE_POINTER_TYPE()" link="GType.html#G-DEFINE-POINTER-TYPE:CAPS" since="2.26"/>
+    <keyword type="macro" name="G_DEFINE_POINTER_TYPE_WITH_CODE()" link="GType.html#G-DEFINE-POINTER-TYPE-WITH-CODE:CAPS" since="2.26"/>
+    <keyword type="macro" name="G_DEFINE_TYPE()" link="GType.html#G-DEFINE-TYPE:CAPS" since="2.4"/>
+    <keyword type="macro" name="G_DEFINE_TYPE_EXTENDED()" link="GType.html#G-DEFINE-TYPE-EXTENDED:CAPS" since="2.4"/>
+    <keyword type="macro" name="G_DEFINE_TYPE_WITH_CODE()" link="GType.html#G-DEFINE-TYPE-WITH-CODE:CAPS" since="2.4"/>
+    <keyword type="macro" name="G_TYPE_BOOLEAN" link="GType.html#G-TYPE-BOOLEAN:CAPS"/>
+    <keyword type="macro" name="G_TYPE_BOXED" link="GType.html#G-TYPE-BOXED:CAPS"/>
+    <keyword type="macro" name="G_TYPE_CHAR" link="GType.html#G-TYPE-CHAR:CAPS"/>
+    <keyword type="macro" name="G_TYPE_CHECK_CLASS_CAST()" link="GType.html#G-TYPE-CHECK-CLASS-CAST:CAPS"/>
+    <keyword type="macro" name="G_TYPE_CHECK_CLASS_TYPE()" link="GType.html#G-TYPE-CHECK-CLASS-TYPE:CAPS"/>
+    <keyword type="macro" name="G_TYPE_CHECK_INSTANCE()" link="GType.html#G-TYPE-CHECK-INSTANCE:CAPS"/>
+    <keyword type="macro" name="G_TYPE_CHECK_INSTANCE_CAST()" link="GType.html#G-TYPE-CHECK-INSTANCE-CAST:CAPS"/>
+    <keyword type="macro" name="G_TYPE_CHECK_INSTANCE_TYPE()" link="GType.html#G-TYPE-CHECK-INSTANCE-TYPE:CAPS"/>
+    <keyword type="macro" name="G_TYPE_CHECK_VALUE()" link="GType.html#G-TYPE-CHECK-VALUE:CAPS"/>
+    <keyword type="macro" name="G_TYPE_CLASS_GET_PRIVATE()" link="GType.html#G-TYPE-CLASS-GET-PRIVATE:CAPS" since="2.24"/>
+    <keyword type="macro" name="G_TYPE_DOUBLE" link="GType.html#G-TYPE-DOUBLE:CAPS"/>
+    <keyword type="macro" name="G_TYPE_ENUM" link="GType.html#G-TYPE-ENUM:CAPS"/>
+    <keyword type="macro" name="G_TYPE_FLAGS" link="GType.html#G-TYPE-FLAGS:CAPS"/>
+    <keyword type="macro" name="G_TYPE_FLAG_RESERVED_ID_BIT" link="GType.html#G-TYPE-FLAG-RESERVED-ID-BIT:CAPS"/>
+    <keyword type="macro" name="G_TYPE_FLOAT" link="GType.html#G-TYPE-FLOAT:CAPS"/>
+    <keyword type="macro" name="G_TYPE_FROM_CLASS()" link="GType.html#G-TYPE-FROM-CLASS:CAPS"/>
+    <keyword type="macro" name="G_TYPE_FROM_INSTANCE()" link="GType.html#G-TYPE-FROM-INSTANCE:CAPS"/>
+    <keyword type="macro" name="G_TYPE_FUNDAMENTAL_MAX" link="GType.html#G-TYPE-FUNDAMENTAL-MAX:CAPS"/>
+    <keyword type="macro" name="G_TYPE_FUNDAMENTAL_SHIFT" link="GType.html#G-TYPE-FUNDAMENTAL-SHIFT:CAPS"/>
+    <keyword type="macro" name="G_TYPE_HAS_VALUE_TABLE()" link="GType.html#G-TYPE-HAS-VALUE-TABLE:CAPS"/>
+    <keyword type="macro" name="G_TYPE_INSTANCE_GET_CLASS()" link="GType.html#G-TYPE-INSTANCE-GET-CLASS:CAPS"/>
+    <keyword type="macro" name="G_TYPE_INSTANCE_GET_PRIVATE()" link="GType.html#G-TYPE-INSTANCE-GET-PRIVATE:CAPS" since="2.4"/>
+    <keyword type="macro" name="G_TYPE_INT" link="GType.html#G-TYPE-INT:CAPS"/>
+    <keyword type="macro" name="G_TYPE_INT64" link="GType.html#G-TYPE-INT64:CAPS"/>
+    <keyword type="macro" name="G_TYPE_INVALID" link="GType.html#G-TYPE-INVALID:CAPS"/>
+    <keyword type="macro" name="G_TYPE_LONG" link="GType.html#G-TYPE-LONG:CAPS"/>
+    <keyword type="macro" name="G_TYPE_NONE" link="GType.html#G-TYPE-NONE:CAPS"/>
+    <keyword type="macro" name="G_TYPE_OBJECT" link="GType.html#G-TYPE-OBJECT:CAPS"/>
+    <keyword type="macro" name="G_TYPE_PARAM" link="GType.html#G-TYPE-PARAM:CAPS"/>
+    <keyword type="macro" name="G_TYPE_POINTER" link="GType.html#G-TYPE-POINTER:CAPS"/>
+    <keyword type="macro" name="G_TYPE_RESERVED_BSE_FIRST" link="GType.html#G-TYPE-RESERVED-BSE-FIRST:CAPS"/>
+    <keyword type="macro" name="G_TYPE_RESERVED_BSE_LAST" link="GType.html#G-TYPE-RESERVED-BSE-LAST:CAPS"/>
+    <keyword type="macro" name="G_TYPE_RESERVED_GLIB_FIRST" link="GType.html#G-TYPE-RESERVED-GLIB-FIRST:CAPS"/>
+    <keyword type="macro" name="G_TYPE_RESERVED_GLIB_LAST" link="GType.html#G-TYPE-RESERVED-GLIB-LAST:CAPS"/>
+    <keyword type="macro" name="G_TYPE_RESERVED_USER_FIRST" link="GType.html#G-TYPE-RESERVED-USER-FIRST:CAPS"/>
+    <keyword type="macro" name="G_TYPE_STRING" link="GType.html#G-TYPE-STRING:CAPS"/>
+    <keyword type="macro" name="G_TYPE_UCHAR" link="GType.html#G-TYPE-UCHAR:CAPS"/>
+    <keyword type="macro" name="G_TYPE_UINT" link="GType.html#G-TYPE-UINT:CAPS"/>
+    <keyword type="macro" name="G_TYPE_UINT64" link="GType.html#G-TYPE-UINT64:CAPS"/>
+    <keyword type="macro" name="G_TYPE_ULONG" link="GType.html#G-TYPE-ULONG:CAPS"/>
+    <keyword type="macro" name="G_TYPE_VARIANT" link="GType.html#G-TYPE-VARIANT:CAPS" since="2.26"/>
+    <keyword type="function" name="g_type_add_class_cache_func ()" link="GType.html#g-type-add-class-cache-func"/>
+    <keyword type="function" name="g_type_add_class_private ()" link="GType.html#g-type-add-class-private" since="2.24"/>
+    <keyword type="function" name="g_type_add_interface_check ()" link="GType.html#g-type-add-interface-check" since="2.4"/>
+    <keyword type="function" name="g_type_add_interface_dynamic ()" link="GType.html#g-type-add-interface-dynamic"/>
+    <keyword type="function" name="g_type_add_interface_static ()" link="GType.html#g-type-add-interface-static"/>
+    <keyword type="function" name="g_type_check_class_cast ()" link="GType.html#g-type-check-class-cast"/>
+    <keyword type="function" name="g_type_check_class_is_a ()" link="GType.html#g-type-check-class-is-a"/>
+    <keyword type="function" name="g_type_check_instance ()" link="GType.html#g-type-check-instance"/>
+    <keyword type="function" name="g_type_check_instance_cast ()" link="GType.html#g-type-check-instance-cast"/>
+    <keyword type="function" name="g_type_check_instance_is_a ()" link="GType.html#g-type-check-instance-is-a"/>
+    <keyword type="function" name="g_type_check_is_value_type ()" link="GType.html#g-type-check-is-value-type"/>
+    <keyword type="function" name="g_type_check_value ()" link="GType.html#g-type-check-value"/>
+    <keyword type="function" name="g_type_check_value_holds ()" link="GType.html#g-type-check-value-holds"/>
+    <keyword type="function" name="g_type_children ()" link="GType.html#g-type-children"/>
+    <keyword type="function" name="g_type_class_add_private ()" link="GType.html#g-type-class-add-private" since="2.4"/>
+    <keyword type="function" name="g_type_class_get_private ()" link="GType.html#g-type-class-get-private"/>
+    <keyword type="function" name="g_type_class_peek ()" link="GType.html#g-type-class-peek"/>
+    <keyword type="function" name="g_type_class_peek_parent ()" link="GType.html#g-type-class-peek-parent"/>
+    <keyword type="function" name="g_type_class_peek_static ()" link="GType.html#g-type-class-peek-static" since="2.4"/>
+    <keyword type="function" name="g_type_class_ref ()" link="GType.html#g-type-class-ref"/>
+    <keyword type="function" name="g_type_class_unref ()" link="GType.html#g-type-class-unref"/>
+    <keyword type="function" name="g_type_class_unref_uncached ()" link="GType.html#g-type-class-unref-uncached"/>
+    <keyword type="function" name="g_type_create_instance ()" link="GType.html#g-type-create-instance"/>
+    <keyword type="function" name="g_type_default_interface_peek ()" link="GType.html#g-type-default-interface-peek" since="2.4"/>
+    <keyword type="function" name="g_type_default_interface_ref ()" link="GType.html#g-type-default-interface-ref" since="2.4"/>
+    <keyword type="function" name="g_type_default_interface_unref ()" link="GType.html#g-type-default-interface-unref" since="2.4"/>
+    <keyword type="function" name="g_type_depth ()" link="GType.html#g-type-depth"/>
+    <keyword type="function" name="g_type_free_instance ()" link="GType.html#g-type-free-instance"/>
+    <keyword type="function" name="g_type_from_name ()" link="GType.html#g-type-from-name"/>
+    <keyword type="function" name="g_type_fundamental ()" link="GType.html#g-type-fundamental"/>
+    <keyword type="function" name="g_type_fundamental_next ()" link="GType.html#g-type-fundamental-next"/>
+    <keyword type="function" name="g_type_get_plugin ()" link="GType.html#g-type-get-plugin"/>
+    <keyword type="function" name="g_type_get_qdata ()" link="GType.html#g-type-get-qdata"/>
+    <keyword type="function" name="g_type_init ()" link="GType.html#g-type-init"/>
+    <keyword type="function" name="g_type_init_with_debug_flags ()" link="GType.html#g-type-init-with-debug-flags"/>
+    <keyword type="function" name="g_type_instance_get_private ()" link="GType.html#g-type-instance-get-private"/>
+    <keyword type="function" name="g_type_interface_add_prerequisite ()" link="GType.html#g-type-interface-add-prerequisite"/>
+    <keyword type="function" name="g_type_interface_get_plugin ()" link="GType.html#g-type-interface-get-plugin"/>
+    <keyword type="function" name="g_type_interface_peek ()" link="GType.html#g-type-interface-peek"/>
+    <keyword type="function" name="g_type_interface_peek_parent ()" link="GType.html#g-type-interface-peek-parent"/>
+    <keyword type="function" name="g_type_interface_prerequisites ()" link="GType.html#g-type-interface-prerequisites" since="2.2"/>
+    <keyword type="function" name="g_type_interfaces ()" link="GType.html#g-type-interfaces"/>
+    <keyword type="function" name="g_type_is_a ()" link="GType.html#g-type-is-a"/>
+    <keyword type="function" name="g_type_name ()" link="GType.html#g-type-name"/>
+    <keyword type="function" name="g_type_name_from_class ()" link="GType.html#g-type-name-from-class"/>
+    <keyword type="function" name="g_type_name_from_instance ()" link="GType.html#g-type-name-from-instance"/>
+    <keyword type="function" name="g_type_next_base ()" link="GType.html#g-type-next-base"/>
+    <keyword type="function" name="g_type_parent ()" link="GType.html#g-type-parent"/>
+    <keyword type="function" name="g_type_qname ()" link="GType.html#g-type-qname"/>
+    <keyword type="function" name="g_type_query ()" link="GType.html#g-type-query"/>
+    <keyword type="function" name="g_type_register_dynamic ()" link="GType.html#g-type-register-dynamic"/>
+    <keyword type="function" name="g_type_register_fundamental ()" link="GType.html#g-type-register-fundamental"/>
+    <keyword type="function" name="g_type_register_static ()" link="GType.html#g-type-register-static"/>
+    <keyword type="function" name="g_type_register_static_simple ()" link="GType.html#g-type-register-static-simple" since="2.12"/>
+    <keyword type="function" name="g_type_remove_class_cache_func ()" link="GType.html#g-type-remove-class-cache-func"/>
+    <keyword type="function" name="g_type_remove_interface_check ()" link="GType.html#g-type-remove-interface-check" since="2.4"/>
+    <keyword type="function" name="g_type_set_qdata ()" link="GType.html#g-type-set-qdata"/>
+    <keyword type="function" name="g_type_test_flags ()" link="GType.html#g-type-test-flags"/>
+    <keyword type="function" name="g_type_value_table_peek ()" link="GType.html#g-type-value-table-peek"/>
+    <keyword type="struct" name="struct GTypePluginClass" link="GTypePlugin.html#GTypePluginClass"/>
+    <keyword type="function" name="GTypePluginCompleteInterfaceInfo ()" link="GTypePlugin.html#GTypePluginCompleteInterfaceInfo"/>
+    <keyword type="function" name="GTypePluginCompleteTypeInfo ()" link="GTypePlugin.html#GTypePluginCompleteTypeInfo"/>
+    <keyword type="function" name="GTypePluginUnuse ()" link="GTypePlugin.html#GTypePluginUnuse"/>
+    <keyword type="function" name="GTypePluginUse ()" link="GTypePlugin.html#GTypePluginUse"/>
+    <keyword type="function" name="g_type_plugin_complete_interface_info ()" link="GTypePlugin.html#g-type-plugin-complete-interface-info"/>
+    <keyword type="function" name="g_type_plugin_complete_type_info ()" link="GTypePlugin.html#g-type-plugin-complete-type-info"/>
+    <keyword type="function" name="g_type_plugin_unuse ()" link="GTypePlugin.html#g-type-plugin-unuse"/>
+    <keyword type="function" name="g_type_plugin_use ()" link="GTypePlugin.html#g-type-plugin-use"/>
+    <keyword type="struct" name="struct GTypeModule" link="GTypeModule.html#GTypeModule-struct"/>
+    <keyword type="struct" name="struct GTypeModuleClass" link="GTypeModule.html#GTypeModuleClass"/>
+    <keyword type="macro" name="G_DEFINE_DYNAMIC_TYPE()" link="GTypeModule.html#G-DEFINE-DYNAMIC-TYPE:CAPS" since="2.14"/>
+    <keyword type="macro" name="G_DEFINE_DYNAMIC_TYPE_EXTENDED()" link="GTypeModule.html#G-DEFINE-DYNAMIC-TYPE-EXTENDED:CAPS" since="2.14"/>
+    <keyword type="macro" name="G_IMPLEMENT_INTERFACE_DYNAMIC()" link="GTypeModule.html#G-IMPLEMENT-INTERFACE-DYNAMIC:CAPS" since="2.24"/>
+    <keyword type="function" name="g_type_module_add_interface ()" link="GTypeModule.html#g-type-module-add-interface"/>
+    <keyword type="function" name="g_type_module_register_enum ()" link="GTypeModule.html#g-type-module-register-enum" since="2.6"/>
+    <keyword type="function" name="g_type_module_register_flags ()" link="GTypeModule.html#g-type-module-register-flags" since="2.6"/>
+    <keyword type="function" name="g_type_module_register_type ()" link="GTypeModule.html#g-type-module-register-type"/>
+    <keyword type="function" name="g_type_module_set_name ()" link="GTypeModule.html#g-type-module-set-name"/>
+    <keyword type="function" name="g_type_module_unuse ()" link="GTypeModule.html#g-type-module-unuse"/>
+    <keyword type="function" name="g_type_module_use ()" link="GTypeModule.html#g-type-module-use"/>
+    <keyword type="function" name="GBoxedCopyFunc ()" link="gobject-Boxed-Types.html#GBoxedCopyFunc"/>
+    <keyword type="function" name="GBoxedFreeFunc ()" link="gobject-Boxed-Types.html#GBoxedFreeFunc"/>
+    <keyword type="function" name="g_boxed_copy ()" link="gobject-Boxed-Types.html#g-boxed-copy"/>
+    <keyword type="function" name="g_boxed_free ()" link="gobject-Boxed-Types.html#g-boxed-free"/>
+    <keyword type="function" name="g_boxed_type_register_static ()" link="gobject-Boxed-Types.html#g-boxed-type-register-static"/>
+    <keyword type="function" name="g_value_dup_boxed ()" link="gobject-Boxed-Types.html#g-value-dup-boxed"/>
+    <keyword type="function" name="g_value_get_boxed ()" link="gobject-Boxed-Types.html#g-value-get-boxed"/>
+    <keyword type="function" name="g_value_set_boxed ()" link="gobject-Boxed-Types.html#g-value-set-boxed"/>
+    <keyword type="function" name="g_value_set_boxed_take_ownership ()" link="gobject-Boxed-Types.html#g-value-set-boxed-take-ownership" deprecated="2.4: Use g_value_take_boxed() instead."/>
+    <keyword type="function" name="g_value_set_static_boxed ()" link="gobject-Boxed-Types.html#g-value-set-static-boxed"/>
+    <keyword type="function" name="g_value_take_boxed ()" link="gobject-Boxed-Types.html#g-value-take-boxed" since="2.4"/>
+    <keyword type="struct" name="struct GCClosure" link="gobject-Closures.html#GCClosure"/>
+    <keyword type="function" name="GCallback ()" link="gobject-Closures.html#GCallback"/>
+    <keyword type="struct" name="struct GClosure" link="gobject-Closures.html#GClosure-struct"/>
+    <keyword type="function" name="GClosureMarshal ()" link="gobject-Closures.html#GClosureMarshal"/>
+    <keyword type="function" name="GClosureNotify ()" link="gobject-Closures.html#GClosureNotify"/>
+    <keyword type="struct" name="struct GClosureNotifyData" link="gobject-Closures.html#GClosureNotifyData"/>
+    <keyword type="macro" name="G_CALLBACK()" link="gobject-Closures.html#G-CALLBACK:CAPS"/>
+    <keyword type="macro" name="G_CCLOSURE_SWAP_DATA()" link="gobject-Closures.html#G-CCLOSURE-SWAP-DATA:CAPS"/>
+    <keyword type="macro" name="G_CLOSURE_NEEDS_MARSHAL()" link="gobject-Closures.html#G-CLOSURE-NEEDS-MARSHAL:CAPS"/>
+    <keyword type="macro" name="G_CLOSURE_N_NOTIFIERS()" link="gobject-Closures.html#G-CLOSURE-N-NOTIFIERS:CAPS"/>
+    <keyword type="function" name="g_cclosure_marshal_generic ()" link="gobject-Closures.html#g-cclosure-marshal-generic" since="2.30"/>
+    <keyword type="function" name="g_cclosure_new ()" link="gobject-Closures.html#g-cclosure-new"/>
+    <keyword type="function" name="g_cclosure_new_swap ()" link="gobject-Closures.html#g-cclosure-new-swap"/>
+    <keyword type="function" name="g_closure_add_finalize_notifier ()" link="gobject-Closures.html#g-closure-add-finalize-notifier"/>
+    <keyword type="function" name="g_closure_add_invalidate_notifier ()" link="gobject-Closures.html#g-closure-add-invalidate-notifier"/>
+    <keyword type="function" name="g_closure_add_marshal_guards ()" link="gobject-Closures.html#g-closure-add-marshal-guards"/>
+    <keyword type="function" name="g_closure_invalidate ()" link="gobject-Closures.html#g-closure-invalidate"/>
+    <keyword type="function" name="g_closure_invoke ()" link="gobject-Closures.html#g-closure-invoke"/>
+    <keyword type="function" name="g_closure_new_simple ()" link="gobject-Closures.html#g-closure-new-simple"/>
+    <keyword type="function" name="g_closure_ref ()" link="gobject-Closures.html#g-closure-ref"/>
+    <keyword type="function" name="g_closure_remove_finalize_notifier ()" link="gobject-Closures.html#g-closure-remove-finalize-notifier"/>
+    <keyword type="function" name="g_closure_remove_invalidate_notifier ()" link="gobject-Closures.html#g-closure-remove-invalidate-notifier"/>
+    <keyword type="function" name="g_closure_set_marshal ()" link="gobject-Closures.html#g-closure-set-marshal"/>
+    <keyword type="function" name="g_closure_set_meta_marshal ()" link="gobject-Closures.html#g-closure-set-meta-marshal"/>
+    <keyword type="function" name="g_closure_sink ()" link="gobject-Closures.html#g-closure-sink"/>
+    <keyword type="function" name="g_closure_unref ()" link="gobject-Closures.html#g-closure-unref"/>
+    <keyword type="function" name="g_signal_type_cclosure_new ()" link="gobject-Closures.html#g-signal-type-cclosure-new"/>
+    <keyword type="struct" name="GBinding" link="GBinding.html#GBinding-struct"/>
+    <keyword type="enum" name="enum GBindingFlags" link="GBinding.html#GBindingFlags-enum"/>
+    <keyword type="function" name="GBindingTransformFunc ()" link="GBinding.html#GBindingTransformFunc" since="2.26"/>
+    <keyword type="function" name="g_binding_get_flags ()" link="GBinding.html#g-binding-get-flags" since="2.26"/>
+    <keyword type="function" name="g_binding_get_source ()" link="GBinding.html#g-binding-get-source" since="2.26"/>
+    <keyword type="function" name="g_binding_get_source_property ()" link="GBinding.html#g-binding-get-source-property" since="2.26"/>
+    <keyword type="function" name="g_binding_get_target ()" link="GBinding.html#g-binding-get-target" since="2.26"/>
+    <keyword type="function" name="g_binding_get_target_property ()" link="GBinding.html#g-binding-get-target-property" since="2.26"/>
+    <keyword type="function" name="g_object_bind_property ()" link="GBinding.html#g-object-bind-property" since="2.26"/>
+    <keyword type="function" name="g_object_bind_property_full ()" link="GBinding.html#g-object-bind-property-full" since="2.26"/>
+    <keyword type="function" name="g_object_bind_property_with_closures ()" link="GBinding.html#g-object-bind-property-with-closures" since="2.26"/>
+    <keyword type="property" name="The &quot;flags&quot; property" link="GBinding.html#GBinding--flags"/>
+    <keyword type="property" name="The &quot;source&quot; property" link="GBinding.html#GBinding--source"/>
+    <keyword type="property" name="The &quot;source-property&quot; property" link="GBinding.html#GBinding--source-property"/>
+    <keyword type="property" name="The &quot;target&quot; property" link="GBinding.html#GBinding--target"/>
+    <keyword type="property" name="The &quot;target-property&quot; property" link="GBinding.html#GBinding--target-property"/>
+    <keyword type="" name="Options" link="glib-mkenums.html#id540105"/>
+    <keyword type="" name="Production text substitutions" link="glib-mkenums.html#id507235"/>
+    <keyword type="" name="Trigraph extensions" link="glib-mkenums.html#id534323"/>
+    <keyword type="" name="Options" link="glib-genmarshal.html#id506410"/>
+    <keyword type="" name="Marshaller list format" link="glib-genmarshal.html#id507546"/>
+    <keyword type="" name="Parameter types" link="glib-genmarshal.html#id524681"/>
+    <keyword type="" name="Options" link="gobject-query.html#id507532"/>
+    <keyword type="constant" name="G_TYPE_DEBUG_NONE" link="GType.html#G-TYPE-DEBUG-NONE:CAPS"/>
+    <keyword type="constant" name="G_TYPE_DEBUG_OBJECTS" link="GType.html#G-TYPE-DEBUG-OBJECTS:CAPS"/>
+    <keyword type="constant" name="G_TYPE_DEBUG_SIGNALS" link="GType.html#G-TYPE-DEBUG-SIGNALS:CAPS"/>
+    <keyword type="constant" name="G_TYPE_DEBUG_MASK" link="GType.html#G-TYPE-DEBUG-MASK:CAPS"/>
+    <keyword type="constant" name="G_TYPE_FLAG_ABSTRACT" link="GType.html#G-TYPE-FLAG-ABSTRACT:CAPS"/>
+    <keyword type="constant" name="G_TYPE_FLAG_VALUE_ABSTRACT" link="GType.html#G-TYPE-FLAG-VALUE-ABSTRACT:CAPS"/>
+    <keyword type="constant" name="G_TYPE_FLAG_CLASSED" link="GType.html#G-TYPE-FLAG-CLASSED:CAPS"/>
+    <keyword type="constant" name="G_TYPE_FLAG_INSTANTIATABLE" link="GType.html#G-TYPE-FLAG-INSTANTIATABLE:CAPS"/>
+    <keyword type="constant" name="G_TYPE_FLAG_DERIVABLE" link="GType.html#G-TYPE-FLAG-DERIVABLE:CAPS"/>
+    <keyword type="constant" name="G_TYPE_FLAG_DEEP_DERIVABLE" link="GType.html#G-TYPE-FLAG-DEEP-DERIVABLE:CAPS"/>
+    <keyword type="constant" name="G_BINDING_DEFAULT" link="GBinding.html#G-BINDING-DEFAULT:CAPS"/>
+    <keyword type="constant" name="G_BINDING_BIDIRECTIONAL" link="GBinding.html#G-BINDING-BIDIRECTIONAL:CAPS"/>
+    <keyword type="constant" name="G_BINDING_SYNC_CREATE" link="GBinding.html#G-BINDING-SYNC-CREATE:CAPS"/>
+    <keyword type="constant" name="G_BINDING_INVERT_BOOLEAN" link="GBinding.html#G-BINDING-INVERT-BOOLEAN:CAPS"/>
+  </functions>
+</book>

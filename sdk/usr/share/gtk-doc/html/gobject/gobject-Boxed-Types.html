@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Boxed Types</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.76.1">
+<link rel="home" href="index.html" title="GObject Reference Manual">
+<link rel="up" href="rn01.html" title="API Reference">
+<link rel="prev" href="GTypeModule.html" title="GTypeModule">
+<link rel="next" href="gobject-Closures.html" title="Closures">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GTypeModule.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="rn01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GObject Reference Manual</th>
+<td><a accesskey="n" href="gobject-Closures.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#gobject-Boxed-Types.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#gobject-Boxed-Types.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="gobject-Boxed-Types"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gobject-Boxed-Types.top_of_page"></a>Boxed Types</span></h2>
+<p>Boxed Types — A mechanism to wrap opaque C structures registered
+    by the type system</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="gobject-Boxed-Types.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            (<a class="link" href="gobject-Boxed-Types.html#GBoxedCopyFunc" title="GBoxedCopyFunc ()">*GBoxedCopyFunc</a>)                   (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> boxed</code></em>);
+<span class="returnvalue">void</span>                (<a class="link" href="gobject-Boxed-Types.html#GBoxedFreeFunc" title="GBoxedFreeFunc ()">*GBoxedFreeFunc</a>)                   (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> boxed</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            <a class="link" href="gobject-Boxed-Types.html#g-boxed-copy" title="g_boxed_copy ()">g_boxed_copy</a>                        (<em class="parameter"><code><a class="link" href="GType.html" title="Type Information"><span class="type">GType</span></a> boxed_type</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> src_boxed</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="gobject-Boxed-Types.html#g-boxed-free" title="g_boxed_free ()">g_boxed_free</a>                        (<em class="parameter"><code><a class="link" href="GType.html" title="Type Information"><span class="type">GType</span></a> boxed_type</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> boxed</code></em>);
+<a class="link" href="GType.html" title="Type Information"><span class="returnvalue">GType</span></a>               <a class="link" href="gobject-Boxed-Types.html#g-boxed-type-register-static" title="g_boxed_type_register_static ()">g_boxed_type_register_static</a>        (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="gobject-Boxed-Types.html#GBoxedCopyFunc" title="GBoxedCopyFunc ()"><span class="type">GBoxedCopyFunc</span></a> boxed_copy</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="gobject-Boxed-Types.html#GBoxedFreeFunc" title="GBoxedFreeFunc ()"><span class="type">GBoxedFreeFunc</span></a> boxed_free</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            <a class="link" href="gobject-Boxed-Types.html#g-value-dup-boxed" title="g_value_dup_boxed ()">g_value_dup_boxed</a>                   (<em class="parameter"><code>const <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> *value</code></em>);
+<a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            <a class="link" href="gobject-Boxed-Types.html#g-value-get-boxed" title="g_value_get_boxed ()">g_value_get_boxed</a>                   (<em class="parameter"><code>const <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> *value</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="gobject-Boxed-Types.html#g-value-set-boxed" title="g_value_set_boxed ()">g_value_set_boxed</a>                   (<em class="parameter"><code><a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v_boxed</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="gobject-Boxed-Types.html#g-value-set-boxed-take-ownership" title="g_value_set_boxed_take_ownership ()">g_value_set_boxed_take_ownership</a>    (<em class="parameter"><code><a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v_boxed</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="gobject-Boxed-Types.html#g-value-set-static-boxed" title="g_value_set_static_boxed ()">g_value_set_static_boxed</a>            (<em class="parameter"><code><a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v_boxed</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="gobject-Boxed-Types.html#g-value-take-boxed" title="g_value_take_boxed ()">g_value_take_boxed</a>                  (<em class="parameter"><code><a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v_boxed</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="gobject-Boxed-Types.description"></a><h2>Description</h2>
+<p>
+GBoxed is a generic wrapper mechanism for arbitrary C structures. The only
+thing the type system needs to know about the structures is how to copy and
+free them, beyond that they are treated as opaque chunks of memory.
+</p>
+<p>
+Boxed types are useful for simple value-holder structures like rectangles or
+points. They can also be used for wrapping structures defined in non-GObject
+based libraries.
+</p>
+</div>
+<div class="refsect1">
+<a name="gobject-Boxed-Types.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GBoxedCopyFunc"></a><h3>GBoxedCopyFunc ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            (*GBoxedCopyFunc)                   (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> boxed</code></em>);</pre>
+<p>
+This function is provided by the user and should produce a copy
+of the passed in boxed structure.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>boxed</code></em> :</span></p></td>
+<td>The boxed structure to be copied.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The newly created copy of the boxed structure.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GBoxedFreeFunc"></a><h3>GBoxedFreeFunc ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                (*GBoxedFreeFunc)                   (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> boxed</code></em>);</pre>
+<p>
+This function is provided by the user and should free the boxed
+structure passed.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>boxed</code></em> :</span></p></td>
+<td>The boxed structure to be freed.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-boxed-copy"></a><h3>g_boxed_copy ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            g_boxed_copy                        (<em class="parameter"><code><a class="link" href="GType.html" title="Type Information"><span class="type">GType</span></a> boxed_type</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> src_boxed</code></em>);</pre>
+<p>
+Provide a copy of a boxed structure <em class="parameter"><code>src_boxed</code></em> which is of type <em class="parameter"><code>boxed_type</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>boxed_type</code></em> :</span></p></td>
+<td>The type of <em class="parameter"><code>src_boxed</code></em>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>src_boxed</code></em> :</span></p></td>
+<td>The boxed structure to be copied.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The newly created copy of the boxed structure.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-boxed-free"></a><h3>g_boxed_free ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                g_boxed_free                        (<em class="parameter"><code><a class="link" href="GType.html" title="Type Information"><span class="type">GType</span></a> boxed_type</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> boxed</code></em>);</pre>
+<p>
+Free the boxed structure <em class="parameter"><code>boxed</code></em> which is of type <em class="parameter"><code>boxed_type</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>boxed_type</code></em> :</span></p></td>
+<td>The type of <em class="parameter"><code>boxed</code></em>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>boxed</code></em> :</span></p></td>
+<td>The boxed structure to be freed.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-boxed-type-register-static"></a><h3>g_boxed_type_register_static ()</h3>
+<pre class="programlisting"><a class="link" href="GType.html" title="Type Information"><span class="returnvalue">GType</span></a>               g_boxed_type_register_static        (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="gobject-Boxed-Types.html#GBoxedCopyFunc" title="GBoxedCopyFunc ()"><span class="type">GBoxedCopyFunc</span></a> boxed_copy</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="gobject-Boxed-Types.html#GBoxedFreeFunc" title="GBoxedFreeFunc ()"><span class="type">GBoxedFreeFunc</span></a> boxed_free</code></em>);</pre>
+<p>
+This function creates a new <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived type id for a new
+boxed type with name <em class="parameter"><code>name</code></em>. Boxed type handling functions have to be
+provided to copy and free opaque boxed structures of this type.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>name</code></em> :</span></p></td>
+<td>Name of the new boxed type.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>boxed_copy</code></em> :</span></p></td>
+<td>Boxed structure copy function.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>boxed_free</code></em> :</span></p></td>
+<td>Boxed structure free function.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>New <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived type id for <em class="parameter"><code>name</code></em>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-value-dup-boxed"></a><h3>g_value_dup_boxed ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            g_value_dup_boxed                   (<em class="parameter"><code>const <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> *value</code></em>);</pre>
+<p>
+Get the contents of a <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a>.  Upon getting,
+the boxed value is duplicated and needs to be later freed with
+<a class="link" href="gobject-Boxed-Types.html#g-boxed-free" title="g_boxed_free ()"><code class="function">g_boxed_free()</code></a>, e.g. like: g_boxed_free (G_VALUE_TYPE (<em class="parameter"><code>value</code></em>),
+return_value);
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>a valid <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> of <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived type</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>boxed contents of <em class="parameter"><code>value</code></em>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-value-get-boxed"></a><h3>g_value_get_boxed ()</h3>
+<pre class="programlisting"><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>            g_value_get_boxed                   (<em class="parameter"><code>const <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> *value</code></em>);</pre>
+<p>
+Get the contents of a <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>a valid <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> of <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived type</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>boxed contents of <em class="parameter"><code>value</code></em>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-value-set-boxed"></a><h3>g_value_set_boxed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                g_value_set_boxed                   (<em class="parameter"><code><a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v_boxed</code></em>);</pre>
+<p>
+Set the contents of a <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> to <em class="parameter"><code>v_boxed</code></em>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>a valid <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> of <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived type</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>v_boxed</code></em> :</span></p></td>
+<td>boxed value to be set. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-value-set-boxed-take-ownership"></a><h3>g_value_set_boxed_take_ownership ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                g_value_set_boxed_take_ownership    (<em class="parameter"><code><a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v_boxed</code></em>);</pre>
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Warning</h3>
+<p><code class="literal">g_value_set_boxed_take_ownership</code> has been deprecated since version 2.4 and should not be used in newly-written code. Use <a class="link" href="gobject-Boxed-Types.html#g-value-take-boxed" title="g_value_take_boxed ()"><code class="function">g_value_take_boxed()</code></a> instead.</p>
+</div>
+<p>
+This is an internal function introduced mainly for C marshallers.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>a valid <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> of <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived type</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>v_boxed</code></em> :</span></p></td>
+<td>duplicated unowned boxed value to be set. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-value-set-static-boxed"></a><h3>g_value_set_static_boxed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                g_value_set_static_boxed            (<em class="parameter"><code><a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v_boxed</code></em>);</pre>
+<p>
+Set the contents of a <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> to <em class="parameter"><code>v_boxed</code></em>.
+The boxed value is assumed to be static, and is thus not duplicated
+when setting the <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a>.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>a valid <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> of <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived type</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>v_boxed</code></em> :</span></p></td>
+<td>static boxed value to be set. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="g-value-take-boxed"></a><h3>g_value_take_boxed ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                g_value_take_boxed                  (<em class="parameter"><code><a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glib/glib-Basic-Types.html#gconstpointer"><span class="type">gconstpointer</span></a> v_boxed</code></em>);</pre>
+<p>
+Sets the contents of a <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> to <em class="parameter"><code>v_boxed</code></em>
+and takes over the ownership of the callers reference to <em class="parameter"><code>v_boxed</code></em>;
+the caller doesn't have to unref it any more.
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>a valid <a class="link" href="GType.html#GValue"><span class="type">GValue</span></a> of <a class="link" href="GType.html#G-TYPE-BOXED:CAPS" title="G_TYPE_BOXED"><code class="literal">G_TYPE_BOXED</code></a> derived type</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>v_boxed</code></em> :</span></p></td>
+<td>duplicated unowned boxed value to be set. <span class="annotation">[<acronym title="NULL is ok, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.4</p>
+</div>
+</div>
+<div class="refsect1">
+<a name="gobject-Boxed-Types.see-also"></a><h2>See Also</h2>
+<a href="gobject-Standard-Parameter-and-Value-Types.html#GParamSpecBoxed"><span class="type">GParamSpecBoxed</span></a>, <a href="gobject-Standard-Parameter-and-Value-Types.html#g-param-spec-boxed"><code class="function">g_param_spec_boxed()</code></a>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>
